@@ -1,6 +1,12 @@
 <p>
-  {{hero.name}}
+  {{hero.id}} : {{hero.name}}
 </p>
+
+<div>
+  <label>name:
+    <input [(ngModel)]="hero.name" placeholder="name">
+  </label>
+</div>
 
 <div>
   <button [disabled]="isSpecial">propery binding button</button>
@@ -12,4 +18,8 @@
 
 <div>
   <button [style.color]="isSpecial ? 'red' : 'green'">style binding button</button>
+</div>
+
+<div>
+  <button (click)="onSave($event)">event binding save button</button>
 </div>
